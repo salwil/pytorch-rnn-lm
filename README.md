@@ -38,9 +38,9 @@ Train a model:
     ./scripts/train.sh
 
 Currently the following hyperparameters are set:
-    - embedding size: 400
-    - epochs: 40
-    - dropout: 0.5
+* embedding size: 400
+* epochs: 40
+* dropout: 0.5
 With the vocabulary size of 5000 they reached the best perplexity out of all tries (see appendix).
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
@@ -54,7 +54,6 @@ To chose between sample or greedy search, change the parameter --strategy inside
 # Further Remarks
 
 I did the steps with a textfile containing text of Greenlandic newspapers. File download link: https://www.dropbox.com/s/f0ag89gn0zlmf6b/gl_aviser.txt?dl=0
-
 
 
 Actually I would have liked to work with a file with proper Greenlandic Inuktitut, as I would have been really interested in the results of the text generate module, which is actually built for English, which is a completely different type of language. But I was not able to find an textfile which was large enough. What I found was a lot of online news papers, but the articles are normally written in Greenlandic and Danish (and sometimes even in English). So besides that Greenlandic would already have a lot of unknown vocabulary itself (because it is an agglutinative language - sentences can consist of one or two very long "words", which are of course all a bit different from each other, so a very low probability results), it is enlarged by the Danish and English vocabulary. 
