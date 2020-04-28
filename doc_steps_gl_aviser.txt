@@ -1,0 +1,68 @@
+Instructions:
+
+File download link: https://www.dropbox.com/s/f0ag89gn0zlmf6b/gl_aviser.txt?dl=0
+
+1. Execute ./script/download_data sh to download and preprocess the data, setting vocabulary size to 5000.
+2. Execute ./scripts/train.sh with the following hyperparameters:
+    - embedding size: 400
+    - epochs: 40
+    - dropout: 0.5
+
+3. Execute ./scripts/generate.sh. You can set the parameter --strategy either to sample (to generate by sample search) or greedy (to generate by greedy search).
+
+
+General Remarks:
+
+Actually I would have liked to work with a file with proper Greenlandic Inuktitut, as I would have been really interested in the results of the text generate module, which is actually built for English, which is a completely different type of language. But I was not able to find an textfile which was large enough. What I found was a lot of online news papers, but the articles are normally written in Greenlandic and Danish (and sometimes even in English). So besides that Greenlandic would already have a lot of unknown vocabulary itself (because it is an agglutinative language - sentences can consist of one or two very long "words", which are of course all a bit different from each other, so a very low probability results), it is enlarged by the Danish and English vocabulary. 
+
+For the sample search there were still some "nice" result when generating text, but at greedy search it was kind of fail. It produced only unknown- and eof-tags. :(
+
+
+Additions: notes to different training results
+
+Training results with different hyperparameters and vocabulary size: 5000
+
+*------------------------------------------------------------------*
+| emb. size  |   epochs   |   dropout    |   ppl     |   model     |
+|----------------------------------------------------|-------------| 
+|    200     |     40     |     0.5      |  221.69   | model_1.pt  |
+|----------------------------------------------------|-------------| 
+|    400     |     40     |     0.5      |  137.60   | model_2.pt  | --> model to use
+|----------------------------------------------------|-------------| 
+|    200     |     40     |     0.5      |  221.69   | model_3.pt  |
+|----------------------------------------------------|-------------| 
+|    200     |     40     |     0.7      |  143.34   | model_4.pt  |
+|----------------------------------------------------|-------------| 
+|    400     |     40     |     0.7      |  140.32   | model_5.pt  |
+|----------------------------------------------------|-------------| 
+|    400     |     40     |     0.7      |  140.32   | model_6.pt  |
+|----------------------------------------------------|-------------| 
+|    500     |     40     |     0.8      |  138.47   | model_7.pt  |
+|----------------------------------------------------|-------------| 
+|    400     |     30     |     0.5      |  278.54   | model_8.pt  |
+*------------------------------------------------------------------*
+
+Training result with vocabulary size: 6000
+
+*------------------------------------------------------------------*
+| emb. size  |   epochs   |   dropout    |   ppl     |   model     |
+|----------------------------------------------------|-------------| 
+|    400     |     40     |     0.5      |  137.60   | model_2.pt  |
+*------------------------------------------------------------------*
+
+
+Training results with different hyperparameters and vocabulary size: 10000
+
+-------------------------------------------------------------------*
+| emb. size  |   epochs   |   dropout    |   ppl     |   model     |
+|----------------------------------------------------|-------------|  
+|    200     |     40     |     0.5      |  288.08   | model_1.pt  |
+|----------------------------------------------------|-------------| 
+|    400     |     30     |     0.5      |  270.03   | model_2.pt  |
+|----------------------------------------------------|-------------| 
+|    500     |     30     |     0.5      |  286.96   | model_3.pt  |
+|----------------------------------------------------|-------------| 
+|    500     |     30     |     0.7      |  265.18   | model_4.pt  |
+|----------------------------------------------------|-------------| 
+|    300     |     40     |     0.4      |  278.54   | model_5.pt  |
+*------------------------------------------------------------------*
