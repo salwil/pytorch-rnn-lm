@@ -59,9 +59,8 @@ For the sample search there were still some "nice" result when generating text, 
 ### My notes to different training results
 
 Training results with different hyperparameters and vocabulary size: 5000
-
+```
 *------------------------------------------------------------------*
-
 | emb. size  |   epochs   |   dropout    |   ppl     |   model     |
 |----------------------------------------------------|-------------| 
 |    200     |     40     |     0.5      |  221.69   | model_1.pt  |
@@ -94,7 +93,7 @@ Training results with different hyperparameters and vocabulary size: 10000
 
 -------------------------------------------------------------------*
 | emb. size  |   epochs   |   dropout    |   ppl     |   model     |
-|----------------------------------------------------|-------------|  
+|----------------------------------------------------|-------------|
 |    200     |     40     |     0.5      |  288.08   | model_1.pt  |
 |----------------------------------------------------|-------------| 
 |    400     |     30     |     0.5      |  270.03   | model_2.pt  |
@@ -105,3 +104,4 @@ Training results with different hyperparameters and vocabulary size: 10000
 |----------------------------------------------------|-------------| 
 |    300     |     40     |     0.4      |  278.54   | model_5.pt  |
 *------------------------------------------------------------------*
+```
