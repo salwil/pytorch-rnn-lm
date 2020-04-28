@@ -41,6 +41,7 @@ Currently the following hyperparameters are set:
 * embedding size: 400
 * epochs: 40
 * dropout: 0.5
+
 With the vocabulary size of 5000 they reached the best perplexity out of all tries (see appendix).
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
