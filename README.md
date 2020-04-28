@@ -60,7 +60,7 @@ For the sample search there were still some "nice" result when generating text, 
 
 Training results with different hyperparameters and vocabulary size: 5000
 
-*------------------------------------------------------------------*\n
+*------------------------------------------------------------------
 | emb. size  |   epochs   |   dropout    |   ppl     |   model     |
 |----------------------------------------------------|-------------| 
 |    200     |     40     |     0.5      |  221.69   | model_1.pt  |
