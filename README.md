@@ -59,7 +59,7 @@ For the sample search there were still some "nice" result when generating text, 
 ### My notes to different training results
 
 Training results with different hyperparameters and vocabulary size: 5000
-```
+```txt
 *------------------------------------------------------------------*
 | emb. size  |   epochs   |   dropout    |   ppl     |   model     |
 |----------------------------------------------------|-------------| 
